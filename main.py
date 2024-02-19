@@ -9,10 +9,10 @@ url = "https://newsapi.org/v2/everything?" \
       "from=2024-01-19&sortBy=publishedAt&apiKey=" + api_key + "&language=en"
 
 # make a request
-request = rq.get(url)
+response = rq.get(url)
 
 # Get a dictionary with data
-content = request.json()
+content = response.json()
 
 body = " "
 # Access the article titles and description
